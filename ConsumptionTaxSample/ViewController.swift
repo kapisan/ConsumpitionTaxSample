@@ -22,6 +22,7 @@ class ViewController: UIViewController {
 
     @IBAction func calculationActionButton(_ sender: UIButton) {
 
+        //totalの計算式
         var total = 0
 
         guard let price = Int(priceTextField.text!) else { return }
@@ -31,5 +32,15 @@ class ViewController: UIViewController {
 
         totalLabel.text = String(total)
 
+        var consumptionTax:Double
+
+        //消費税8%の計算
+        consumptionTax = 1.08
+        let eight = Int(Double(total) * consumptionTax)
+        eightLabel.text = String(eight)
+        //消費税10%の計算
+        consumptionTax = 1.10
+        let ten = Int(Double(total) * consumptionTax)
+        tenLabel.text = String(ten)
     }
 }
