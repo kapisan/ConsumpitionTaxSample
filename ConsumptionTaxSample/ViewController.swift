@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet private weak var eightLabel: UILabel!
     @IBOutlet private weak var tenLabel: UILabel!
 
-    var price = 0
-    var quantity = 0
+//    var price = ""
+//    var quantity = ""
     var total = 0
 
     override func viewDidLoad() {
@@ -25,7 +25,31 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculationActionButton(_ sender: UIButton) {
-        
+//        var price = 0
+//        var quantity = 0
+//
+//        if priceTextField.text != "" {
+//            price = Int(priceTextField.text!)!
+//        }
+//
+//        if quantityTextField.text != "" {
+//            quantity = Int(quantityTextField.text!)!
+//        }
+//
+//        total = price * quantity
+//
+//        print(total)
+
+        let price: Int?
+        let quantity: Int?
+
+        if let a = priceTextField.text {
+           print(a)
+        }
+
+        if let b = quantityTextField.text {
+            print(b)
+        }
     }
 
 }
