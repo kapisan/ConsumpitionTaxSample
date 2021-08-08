@@ -44,6 +44,3 @@ class ViewController: UIViewController {
         tenLabel.text = String(ten)
     }
 }
-
-//テストコメントを追加
-//githubとgitのテストのために追加
