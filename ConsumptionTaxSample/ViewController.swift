@@ -23,9 +23,7 @@ class ViewController: UIViewController {
         guard let quantity = Int(quantityTextField.text!) else { return }
 
         total = Int(price) * Int(quantity)
-
         totalLabel.text = String(total)
-
         var consumptionTax:Double
 
         //消費税8%の計算
