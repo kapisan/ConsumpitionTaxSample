@@ -46,3 +46,4 @@ class ViewController: UIViewController {
 }
 
 //テストコメントを追加
+//githubとgitのテストのために追加
