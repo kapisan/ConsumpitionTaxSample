@@ -15,13 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var eightLabel: UILabel!
     @IBOutlet private weak var tenLabel: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
     @IBAction func calculationActionButton(_ sender: UIButton) {
-
         //totalの計算式
         var total = 0
 
@@ -36,11 +30,21 @@ class ViewController: UIViewController {
 
         //消費税8%の計算
         consumptionTax = 1.08
-        let eight = Int(Double(total) * consumptionTax)
-        eightLabel.text = String(eight)
+        calculationEight(total: total, consumptionTax: consumptionTax)
         //消費税10%の計算
         consumptionTax = 1.10
+     calculationTen(total: total, consumptionTax: consumptionTax)
+    }
+
+    func calculationEight(total: Int,consumptionTax: Double) {
+        let eight = Int(Double(total) * consumptionTax)
+        eightLabel.text = String(eight)
+    }
+
+    func calculationTen(total: Int,consumptionTax: Double) {
         let ten = Int(Double(total) * consumptionTax)
         tenLabel.text = String(ten)
     }
 }
+
+
